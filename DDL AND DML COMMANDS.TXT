@@ -1,0 +1,66 @@
+
+
+CREATE TABLE product(
+	productID INT PRIMARY KEY,
+	productName VARCHAR (50),
+	categoryID VARCHAR (50),
+	brand VARCHAR (50),
+	price VARCHAR (50),
+	stockquantity VARCHAR (50),
+	supplier VARCHAR (50)
+	);
+
+CREATE TABLE category(
+	categoryID INT PRIMARY KEY,
+	categoryName VARCHAR (50),
+	discription VARCHAR (50)
+	);
+
+CREATE TABLE supplier(
+	supplierID INT PRIMARY KEY,
+	supplierName VARCHAR (50),
+	contactNUMBER VARCHAR (50),
+	address VARCHAR (50),
+	email VARCHAR (50)
+	);
+
+CREATE TABLE customer(
+	customerID INT PRIMARY KEY,
+	firstname VARCHAR (50),
+	lastname VARCHAR (50),
+	contactnumber VARCHAR (50),
+	address VARCHAR (50)
+	);
+
+CREATE TABLE orderr(
+	orderID INT PRIMARY KEY,
+	customerID VARCHAR (50),
+	productID VARCHAR (50),
+	orderdate VARCHAR (50),
+	quantity VARCHAR (50),
+	totalamount VARCHAR (50)
+	);
+
+INSERT INTO customer(customerID, firstname, lastname, contactnumber,address)
+VALUES ('01', 'Maria', 'Santos', '9738463856', 'Manila', 'Laguna');
+
+INSERT INTO category (categoryID, categoryname, discription)
+VALUES ('001', 'haircare','product/personal hygiene');
+
+INSERT INTO  orderr(orderID, customerID, productID, orderdate, quantity, totalamount)
+VALUES ('001','cu001','p001','2026-07-01','2','360')
+
+INSERT INTO product(	productID, productName, categoryID,	brand, price, stockquantity, supplier)
+VALUES ('001','shampoo','c001','dove','180','50','s001');
+
+INSERT INTO supplier(supplierID, supplierName, contactNUMBER, address, email)
+VALUES ('001', 'abdcd trading', '9738463856', 'manila', 'abcd@gmail.com')
+
+
+ALTER TABLE customer
+ADD password VARCHAR(100)
+ALTER TABLE customer
+ADD username VARCHAR (100);
+
+UPDATE customer SET username = 'lorise'
+WHERE customerID = '1'

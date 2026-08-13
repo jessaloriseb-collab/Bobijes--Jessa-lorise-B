@@ -1,0 +1,2 @@
+ALTER TABLE product
+MODIFY ProductName VARCHAR(100);

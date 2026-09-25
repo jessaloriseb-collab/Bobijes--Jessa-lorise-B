@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 10% 20%, #ffd6e7 0%, transparent 30%),
+        radial-gradient(circle at 90% 10%, #e4d4ff 0%, transparent 30%),
+        radial-gradient(circle at 50% 90%, #ffc4dd 0%, transparent 35%),
+        linear-gradient(135deg, #fff0f6, #f8efff, #eef5ff);
+
+    color: #4a2940;
+}
+
+/* ---------- CENTERING & SIZING FOR LOGIN ---------- */
+
+html, body.login-body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.login-body {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden;
+}
+
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.login-card {
+    width: 100% !important;
+    max-width: 380px !important; /* Limits the card from expanding full width */
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 32px 28px !important;
+    box-shadow: 0 15px 40px rgba(190, 24, 93, 0.15);
+    margin: 0 auto !important;
+}
+
+.login-card h2 {
+    color: #be185d;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+/* ---------- PASSWORD INPUT & EYE TOGGLE ---------- */
+
+.password-input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.password-input-group .form-control {
+    padding-right: 42px !important;
+}
+
+.password-toggle-btn {
+    position: absolute;
+    right: 12px;
+    background: transparent !important;
+    border: none !important;
+    color: #ec4899;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    font-size: 18px;
+}
+
+/* ---------- DASHBOARD & TABLE STYLES ---------- */
+
+.container {
+    max-width: 1100px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.container > .d-flex {
+    background: linear-gradient(
+        135deg,
+        #ff4f9a,
+        #ff6fb5,
+        #a855f7
+    );
+
+    padding: 25px 30px;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 10px 30px rgba(236, 72, 153, 0.25);
+}
+
+.container h2 {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.container h2::before {
+    content: "♥";
+    color: #ffffff;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.btn-primary {
+    background: linear-gradient(
+        135deg,
+        #ff4f9a,
+        #ff6fb5
+    );
+
+    border: none;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 11px 20px;
+    border-radius: 10px;
+    transition: 0.25s ease;
+    box-shadow: 0 5px 15px rgba(236, 72, 153, 0.25);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(
+        135deg,
+        #e03e85,
+        #e85aa2
+    );
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.card {
+    border: none;
+    border-radius: 0 0 20px 20px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 15px 40px rgba(190, 24, 93, 0.12);
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.table {
+    margin: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.table thead th {
+    background: linear-gradient(
+        135deg,
+        #fff0f6,
+        #fce7f3
+    );
+
+    color: #be185d;
+    border-top: 1px solid #fbcfe8;
+    border-bottom: 2px solid #f9a8d4;
+    border-left: none;
+    border-right: none;
+    padding: 15px 16px;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+}
+
+.table tbody td {
+    background: #ffffff;
+    color: #4a2940;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #fce7f3;
+    padding: 17px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    vertical-align: middle;
+}
+
+.table tbody td:first-child {
+    color: #ec4899;
+    font-weight: 800;
+}
+
+.table tbody tr {
+    transition: 0.25s ease;
+}
+
+.table tbody tr:hover td {
+    background: #fff5fa;
+}
+
+.btn-warning {
+    background: linear-gradient(
+        135deg,
+        #fbbf24,
+        #fb7185
+    );
+
+    border: none;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 7px 14px;
+    border-radius: 8px;
+}
+
+.btn-danger {
+    background: linear-gradient(
+        135deg,
+        #fb7185,
+        #e11d48
+    );
+
+    border: none;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 7px 14px;
+    border-radius: 8px;
+}
+
+.form-label {
+    color: #831843;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.form-control {
+    background: #fff7fb;
+    border: 1px solid #f9a8d4;
+    color: #4a2940;
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+.form-control:focus {
+    background: #ffffff;
+    color: #4a2940;
+    border-color: #ec4899;
+    box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.15);
+}
